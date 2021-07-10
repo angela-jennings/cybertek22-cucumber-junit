@@ -28,5 +28,12 @@ public class GoogleStepDefinitions {
 
         Assert.assertTrue(actualTitle.contains(expInTitle));
     }
+    @Then("User should see title as Google")
+    public void user_should_see_title_as_google() {
+       String actTitle = Driver.getDriver().getTitle();
+       String expTitle = "Google";
+       Assert.assertTrue(actTitle.equals(expTitle));
+
+    }
 
 }

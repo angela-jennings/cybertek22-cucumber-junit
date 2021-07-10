@@ -2,9 +2,7 @@ package com.cybertek.step_definitions.office_hours_step_definitions;
 
 import com.cybertek.pages.office_hours_pages.AmazonPage;
 import com.cybertek.utilities.BrowserUtils;
-import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
-import com.cybertek.utilities.office_hours_utilities.AmazonUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
