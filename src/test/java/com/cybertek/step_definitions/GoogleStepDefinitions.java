@@ -32,7 +32,7 @@ public class GoogleStepDefinitions {
     public void user_should_see_title_as_google() {
        String actTitle = Driver.getDriver().getTitle();
        String expTitle = "Google";
-       Assert.assertTrue(actTitle.equals(expTitle));
+       Assert.assertEquals(actTitle, expTitle);
 
     }
 
