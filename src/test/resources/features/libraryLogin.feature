@@ -11,28 +11,29 @@
 #6. No Java-selenium code implementation needed. Just add printing line in the
 #implementation regarding what should be happening when the code is ran.
 #Ex: “User is on the login page
-  @newWIP
+
+  @wip
   Feature: Library app login feature
     User Story:
     As a user, I should be able to login with correct credentials to different accounts and the dashboard should   be displayed
 
+    Background: Assuming user is on login page
+      Given User is on the library home page
+
     @Librarian
     Scenario: Logging in as librarian
-      Given User is on the library home page
       When User enters correct librarian username
       And User enters correct librarian password
       Then User should see the dashboard
 
     @Student
     Scenario: Logging in as student
-      Given User is on the library home page
       When User enters correct student username
       And User enters correct student password
       Then User should see the dashboard
 
     @Admin
     Scenario: Logging in as admin
-      Given User is on the library home page
       When User enters correct admin username
       And User enters correct admin password
       Then User should see the dashboard
