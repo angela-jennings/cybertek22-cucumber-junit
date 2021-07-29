@@ -1,9 +1,11 @@
 package com.cybertek.step_definitions;
 
 import com.cybertek.pages.DropdownPage;
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -22,19 +24,20 @@ public class DropdownStepDefinitions {
         //1. get dropdown as a select object
         Select monthDropdown = new Select(dropdownPage.months);
 
-        //2. get all the dropdowns and store in a list
+//        //2. get all the dropdowns and store in a list
         List<WebElement> actualMonthsAsWebElements = monthDropdown.getOptions();
 
-        //3. convert list of web element from List<Web Element> to List<String>
-        List<String> actualMonthsAsString = new ArrayList<>();
-
-        for (WebElement each : actualMonthsAsWebElements){
-            actualMonthsAsString.add(each.getText());
-        }
-
-
-
-
-
+        Assert.assertEquals(expectedList, BrowserUtils.getElementsText(actualMonthsAsWebElements));
+//
+//        //3. convert list of web element from List<Web Element> to List<String>
+//        List<String> actualMonthsAsString = new ArrayList<>();
+//
+//        for (WebElement each : actualMonthsAsWebElements){
+//            actualMonthsAsString.add(each.getText());
+//        }
+//
+//        Assert.assertEquals(expectedList, actualMonthsAsString);  //lists much be each size otherwise it will fail automatically
     }
+
+
 }

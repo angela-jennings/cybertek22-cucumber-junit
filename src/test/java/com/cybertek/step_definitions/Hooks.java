@@ -12,7 +12,7 @@ public class Hooks {
         Driver.getDriver().get("https://en.wikipedia.org/wiki/Main_Page");
     }
 
-    @After ("@wiki")
+    @After ()
     public void tearDownScenario(Scenario scenario){
         if(scenario.isFailed()){
             byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);

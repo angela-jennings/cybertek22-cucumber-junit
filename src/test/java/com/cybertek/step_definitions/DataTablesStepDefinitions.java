@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import java.util.List;
 import java.util.Map;
 
-public class DataTables_StepDefinitions {
+public class DataTablesStepDefinitions {
 
     LibraryLoginPage libraryLoginPage = new LibraryLoginPage();
 

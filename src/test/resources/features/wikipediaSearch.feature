@@ -19,7 +19,7 @@ Feature: Wikipedia Search Functionality
 
 
 
-@scenarioOutline
+@wiki
   Scenario Outline: TC#26: Wikipedia Search Functionality Header Verification
     Given User is on Wikipedia home page
     When User types "<searchValue>" in the wiki search box and User clicks wiki search button
